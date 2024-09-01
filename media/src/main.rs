@@ -12,17 +12,13 @@ impl Media {
                 format!("Book: {} {}", title, author)
             }
             Media::Movie { title, director } => {
-                format!("Movie: {} by {}", title, director)
+                format!("Movie: {} {}", title, director)
             }
             Media::Audiobook { title } => {
                 format!("Audiobook: {}", title)
             }
         }
     }
-}
-
-fn print_media(media: Media) {
-    println!("{:?}", media);
 }
 
 fn main() {
@@ -40,11 +36,7 @@ fn main() {
         author: "Bad Author".to_string(),
     };
 
-    audiobook.description();
-    good_movie.description();
-    bad_book.description();
-
-    print_media(good_movie);
-    print_media(bad_book);
-    print_media(audiobook);
+    println!("{}", audiobook.description());
+    println!("{}", good_movie.description());
+    println!("{}", bad_book.description());
 }
