@@ -73,9 +73,9 @@ fn main() {
         author: "Bad Author".to_string(),
     };
     let podcast = Media::Podcast(42);
-    let placeholder = Media::Placeholder;
 
     let mut catalog = Catalog::new();
+    let placeholder = Media::Placeholder;
 
     catalog.add(audiobook);
     catalog.add(good_movie);
@@ -86,13 +86,8 @@ fn main() {
     println!("Catalog: \n{}", catalog.describe());
     println!("-------");
 
-    // Item: Audiobook { title: "An Audiobook" }
-    match catalog.get_by_index(0) {
-        Some(value) => {
-            println!("Item: {:?}", value);
-        }
-        None => {
-            println!("No value available");
-        }
-    }
+    let item = catalog.get_by_index(0);
+
+    let placeholder = Media::Placeholder;
+    println!("{:#?}", item.unwrap_or(&placeholder));
 }
