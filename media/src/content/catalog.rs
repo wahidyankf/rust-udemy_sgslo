@@ -1,4 +1,4 @@
-use crate::content::media::Media;
+use super::media::Media;
 
 #[derive(Debug)]
 pub struct Catalog {
