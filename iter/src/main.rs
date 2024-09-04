@@ -17,6 +17,12 @@ fn print_elements_iter_adaptor(elements: &Vec<String>) {
         .for_each(|el| println!("{}", el));
 }
 
+fn print_elements_vec_slice(elements: &[String]) {
+    for element in elements {
+        println!("{}", element);
+    }
+}
+
 fn main() {
     let colors = vec![
         String::from("red"),
@@ -39,5 +45,7 @@ fn main() {
     print_elements_for_each(&colors);
     println!("---");
     print_elements_iter_adaptor(&colors);
+    println!("---");
+    print_elements_vec_slice(&colors[1..3]);
     println!("---");
 }
