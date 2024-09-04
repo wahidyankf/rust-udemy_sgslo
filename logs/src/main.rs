@@ -41,7 +41,7 @@ fn main() -> Result<(), Error> {
     //             }
     //         }
     //     }
-    //     Err(why_this_failed) => {
+    //     Err(why_this_failed) =>
     //         println!("{}", why_this_failed)
     //     }
     // }
